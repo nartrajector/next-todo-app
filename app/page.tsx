@@ -45,7 +45,7 @@ export default function App() {
           title="Ongoing"
           filteredTodo={ongoingTodos}
           handleToggleTodo={handleToggleTodo}
-          emptyMessage="No ongoing tasks found!"
+          emptyMessage="No ongoing to do found!"
         />
 
         {/* COMPLETE TODO LISTS */}
@@ -53,7 +53,7 @@ export default function App() {
           title="Completed"
           filteredTodo={completedTodos}
           handleToggleTodo={handleToggleTodo}
-          emptyMessage="No completed tasks found!"
+          emptyMessage="No completed to do found!"
         />
 
         <footer className="fixed bottom-0 py-4 w-full bg-white">
