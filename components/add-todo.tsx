@@ -30,6 +30,9 @@ export default function AddTodo({ addTodo }: AddTodoProps) {
         className="max-w-full sm:max-w-xs"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
+        onKeyDown={(e) => {
+          e.key === "Enter" && handleAddTodo();
+        }}
       />
       <Button onClick={handleAddTodo}>Add todo</Button>
     </div>
