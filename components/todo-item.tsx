@@ -9,7 +9,7 @@ interface TodoItemProps {
 
 export default function TodoItem({ todo, handleToggleTodo }: TodoItemProps) {
   return (
-    <div className="flex gap-2 items-center mb-2">
+    <div className="flex gap-2 items-center">
       <Checkbox
         id={todo.todo}
         className="h-4 w-4"

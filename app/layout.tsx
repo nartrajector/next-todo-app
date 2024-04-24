@@ -6,7 +6,7 @@ import Navigation from "@/components/nav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Todo App",
+  title: "To Do App",
   description: "Created by: Melnar Ancit",
 };
 

@@ -34,7 +34,7 @@ export default function App() {
     <>
       <div className="py-4 px-2 pb-16 space-y-4">
         <header className="flex gap-2 items-center">
-          <h1>Todo Lists</h1>
+          <h1>To Do Lists</h1>
         </header>
 
         {/* ADD TODO */}
