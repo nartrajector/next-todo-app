@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import type { Todos } from "@/app/page";
+import { CornerDownLeft } from "lucide-react";
 
 interface AddTodoProps {
   addTodo: (newTodo: Todos) => void;
@@ -34,7 +35,9 @@ export default function AddTodo({ addTodo }: AddTodoProps) {
           e.key === "Enter" && handleAddTodo();
         }}
       />
-      <Button onClick={handleAddTodo}>Add todo</Button>
+      <Button onClick={handleAddTodo} className="p-2">
+        <CornerDownLeft />
+      </Button>
     </div>
   );
 }

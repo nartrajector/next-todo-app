@@ -1,5 +1,6 @@
 import type { Todos } from "@/app/page";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label"
 
 interface TodoItemProps {
   todo: Todos;
@@ -15,14 +16,14 @@ export default function TodoItem({ todo, handleToggleTodo }: TodoItemProps) {
         checked={todo.completed}
         onClick={() => handleToggleTodo(todo.id)}
       />
-      <label
+      <Label
         htmlFor={todo.todo}
         className={`leading-none ${
           todo.completed ? "line-through text-gray-500" : ""
         }`}
       >
         {todo.todo}
-      </label>
+      </Label>
     </div>
   );
 }
