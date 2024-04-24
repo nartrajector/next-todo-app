@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <>
-      <div className="py-4 px-2 space-y-4">
+      <div className="py-4 px-2 pb-16 space-y-4">
         <header className="flex gap-2 items-center">
           <h1>Todo Lists</h1>
         </header>
@@ -56,9 +56,9 @@ export default function App() {
           emptyMessage="No completed tasks found!"
         />
 
-        <div className="fixed bottom-6">
-          Melnar Ancit {new Date().getFullYear()}
-        </div>
+        <footer className="fixed bottom-0 py-4 w-full bg-white">
+          Melnar Ancit — {new Date().getFullYear()}
+        </footer>
       </div>
     </>
   );
