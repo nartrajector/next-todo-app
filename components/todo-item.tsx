@@ -18,7 +18,7 @@ export default function TodoItem({ todo, handleToggleTodo }: TodoItemProps) {
       />
       <Label
         htmlFor={todo.todo}
-        className={`leading-none ${
+        className={`leading-none text-lg ${
           todo.completed ? "line-through text-gray-500" : ""
         }`}
       >
