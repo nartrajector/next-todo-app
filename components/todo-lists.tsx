@@ -1,31 +1,32 @@
-import type { Todos } from "@/app/page";
+import type { Todos } from "./todo";
 import TodoItem from "./todo-item";
+import { Reorder } from "framer-motion";
 
 interface TodoListsProps {
-  title: string;
-  filteredTodo: Todos[];
+  todos: Todos[];
+  setTodos: (todos: Todos[]) => void;
   handleToggleTodo: (id: number) => void;
   emptyMessage: string;
 }
 
 export default function TodoLists({
-  title,
-  filteredTodo,
+  todos,
+  setTodos,
   handleToggleTodo,
   emptyMessage,
 }: TodoListsProps) {
   return (
     <div>
-      <h2 className="text-md text-gray-500">{title}</h2>
-
-      {filteredTodo.length > 0 ? (
-        filteredTodo.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            handleToggleTodo={handleToggleTodo}
-          />
-        ))
+      {todos.length > 0 ? (
+        <Reorder.Group axis="y" values={todos} onReorder={setTodos}>
+          {todos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              handleToggleTodo={handleToggleTodo}
+            />
+          ))}
+        </Reorder.Group>
       ) : (
         <div>{emptyMessage}</div>
       )}

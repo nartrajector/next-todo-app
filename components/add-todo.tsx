@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import type { Todos } from "@/app/page";
+import type { Todos } from "./todo";
 import { CornerDownLeft } from "lucide-react";
 
 interface AddTodoProps {
